@@ -11,12 +11,9 @@ import java.net.ServerSocket;
 import java.util.Properties;
 import java.util.ResourceBundle;
 
-import cn.settile.lzjyzq2.fileserver.activity.MainActivity;
-import cn.settile.lzjyzq2.fileserver.application.myapplication;
-
 public class Config {
     private static Config config = new Config();
-    private int PORT = 8081;
+    private int PORT = 8080;
     private String WEBDOC = null;
     private String DISKPATH = null;
     private String UPLOAD = null;
@@ -24,7 +21,6 @@ public class Config {
     private Config() {
         WEBDOC = "FileServerWEBDOC";
         DISKPATH = Environment.getExternalStorageDirectory().getPath();
-        PORT = renewPort();
         UPLOAD = Environment.getExternalStorageDirectory().getPath() + File.separator + "FileServerUpload";
         createDir(UPLOAD);
     }
@@ -35,6 +31,14 @@ public class Config {
 
     public int getPORT() {
         return PORT;
+    }
+
+    public void setPORT(int port) {
+        if (port < 1024 || port > 65535) {
+            renewPort();
+        } else {
+            PORT = port;
+        }
     }
 
     public String getWEBDOC() {

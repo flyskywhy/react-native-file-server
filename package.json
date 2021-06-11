@@ -1,0 +1,34 @@
+{
+  "name": "react-native-file-server",
+  "version": "1.0.0",
+  "description": "A full function HTTP file server android module which can be embeded in React Native apps",
+  "main": "index",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/flyskywhy/react-native-file-server.git"
+  },
+  "keywords": [
+    "android",
+    "browser",
+    "delete",
+    "download",
+    "file",
+    "http",
+    "nanohttpd",
+    "open",
+    "react-component",
+    "react-native",
+    "rename",
+    "server",
+    "upload"
+  ],
+  "author": {
+    "name": "Li Zheng",
+    "email": "flyskywhy@gmail.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/flyskywhy/react-native-file-server/issues"
+  },
+  "homepage": "https://github.com/flyskywhy/react-native-file-server#readme"
+}

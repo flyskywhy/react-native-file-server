@@ -7,7 +7,7 @@ import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.j256.ormlite.table.TableUtils;
 
-import cn.settile.lzjyzq2.fileserver.application.myapplication;
+import webserver.HttpFileServerNativeModule;
 import database.DBHelper;
 import fi.iki.elonen.NanoFileUpload;
 import fi.iki.elonen.NanoHTTPD;
@@ -392,7 +392,8 @@ public class WebServer extends NanoHTTPD {
                     Response response(IHTTPSession session, String mimetype) {
                         try {
                             VersionInfo info = new VersionInfo();
-                            info.setVersion(String.valueOf(myapplication.getVersionName(myapplication.getContext())));
+                            // info.setVersion(String.valueOf(HttpFileServerNativeModule.getVersionName(HttpFileServerNativeModule.getContext())));
+                            info.setVersion("1.0.0");
                             return newFixedLengthResponse(JSON.toJSONString(info));
                         }catch (Exception e){
                             e.printStackTrace();

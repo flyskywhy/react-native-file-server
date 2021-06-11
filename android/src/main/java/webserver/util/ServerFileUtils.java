@@ -1,6 +1,6 @@
 package webserver.util;
 
-import cn.settile.lzjyzq2.fileserver.application.myapplication;
+import webserver.HttpFileServerNativeModule;
 import webserver.bean.DiskInfo;
 import webserver.bean.FileInfo;
 import webserver.bean.UploaDirectoryInfo;
@@ -17,7 +17,7 @@ public class ServerFileUtils {
     public static String separator = System.getProperty("file.separator");
 //    public static InputStream getInputStreamForPathInAndroid(String path){
 //        try {
-//            InputStream inputStream = myapplication.getContext().getAssets().open(path);
+//            InputStream inputStream = HttpFileServerNativeModule.getContext().getAssets().open(path);
 //            if (inputStream!=null){
 //                return inputStream;
 //            }
@@ -29,7 +29,7 @@ public class ServerFileUtils {
 
     public static InputStream getInputStreamForAssets(String path) {
         try {
-            InputStream inputStream = myapplication.getContext().getAssets().open(path);
+            InputStream inputStream = HttpFileServerNativeModule.getContext().getAssets().open(path);
             if (inputStream != null) {
                 return inputStream;
             }

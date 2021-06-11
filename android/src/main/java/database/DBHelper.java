@@ -10,7 +10,7 @@ import com.j256.ormlite.table.TableUtils;
 
 import java.sql.SQLException;
 
-import cn.settile.lzjyzq2.fileserver.application.myapplication;
+import webserver.HttpFileServerNativeModule;
 import database.bean.TempFile;
 import database.bean.UserBean;
 
@@ -25,7 +25,7 @@ public class DBHelper extends OrmLiteSqliteOpenHelper {
     }
 
     private DBHelper(){
-        super(myapplication.getContext(),"data.db",null,1);
+        super(HttpFileServerNativeModule.getContext(),"data.db",null,1);
     }
     @Override
     public void onCreate(SQLiteDatabase database, ConnectionSource connectionSource) {
