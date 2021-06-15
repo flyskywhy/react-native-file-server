@@ -392,8 +392,7 @@ public class WebServer extends NanoHTTPD {
                     Response response(IHTTPSession session, String mimetype) {
                         try {
                             VersionInfo info = new VersionInfo();
-                            // info.setVersion(String.valueOf(HttpFileServerNativeModule.getVersionName(HttpFileServerNativeModule.getContext())));
-                            info.setVersion("1.0.0");
+                            info.setVersion(HttpFileServerNativeModule.version);
                             return newFixedLengthResponse(JSON.toJSONString(info));
                         }catch (Exception e){
                             e.printStackTrace();

@@ -26,6 +26,8 @@ public class HttpFileServerNativeModule extends ReactContextBaseJavaModule imple
     private static WebServer webServer;
     protected static boolean serverflag = false;
 
+    public static String version;
+
     public HttpFileServerNativeModule(ReactApplicationContext reactContext) {
         super(reactContext);
         mReactContext = reactContext;
@@ -62,6 +64,11 @@ public class HttpFileServerNativeModule extends ReactContextBaseJavaModule imple
         if (D) Log.d(TAG, "Catalyst instance destroyed");
         stopServer();
         super.onCatalystInstanceDestroy();
+    }
+
+    @ReactMethod
+    public void setVersion(String ver) {
+        version = ver;
     }
 
     @ReactMethod
