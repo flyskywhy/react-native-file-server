@@ -1,6 +1,6 @@
 package webserver.util;
 
-import webserver.HttpFileServerNativeModule;
+import com.flyskywhy.fileserver.HttpFileServerNativeModule;
 import webserver.bean.DiskInfo;
 import webserver.bean.FileInfo;
 import webserver.bean.UploaDirectoryInfo;

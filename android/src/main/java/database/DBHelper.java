@@ -10,7 +10,7 @@ import com.j256.ormlite.table.TableUtils;
 
 import java.sql.SQLException;
 
-import webserver.HttpFileServerNativeModule;
+import com.flyskywhy.fileserver.HttpFileServerNativeModule;
 import database.bean.TempFile;
 import database.bean.UserBean;
 

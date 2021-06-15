@@ -7,7 +7,7 @@ import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.j256.ormlite.table.TableUtils;
 
-import webserver.HttpFileServerNativeModule;
+import com.flyskywhy.fileserver.HttpFileServerNativeModule;
 import database.DBHelper;
 import fi.iki.elonen.NanoFileUpload;
 import fi.iki.elonen.NanoHTTPD;

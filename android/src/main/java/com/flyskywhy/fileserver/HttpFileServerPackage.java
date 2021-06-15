@@ -1,4 +1,4 @@
-package webserver;
+package com.flyskywhy.fileserver;
 
 import com.facebook.react.ReactPackage;
 import com.facebook.react.bridge.NativeModule;

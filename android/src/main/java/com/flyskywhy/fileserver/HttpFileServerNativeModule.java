@@ -1,4 +1,4 @@
-package webserver;
+package com.flyskywhy.fileserver;
 
 import java.io.IOException;
 
@@ -13,7 +13,7 @@ import com.facebook.react.bridge.ReactMethod;
 import webserver.WebServer;
 import webserver.util.Config;
 
-import static webserver.HttpFileServerPackage.TAG;
+import static com.flyskywhy.fileserver.HttpFileServerPackage.TAG;
 
 public class HttpFileServerNativeModule extends ReactContextBaseJavaModule implements LifecycleEventListener {
 
