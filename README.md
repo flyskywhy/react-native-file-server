@@ -15,6 +15,23 @@ Can `上传`(upload) `删除`(delete) `下载`(download) `重命名`(rename) `�
 npm install react-native-file-server
 ```
 
+### Android
+#### targetSdkVersion >= 30 (means Android 11)
+In `android/app/src/main/AndroidManifest.xml`
+```
+<uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
+```
+As [Use of All files access (MANAGE_EXTERNAL_STORAGE) permission - Play Console Help](https://support.google.com/googleplay/android-developer/answer/10467955) said, "you will be required to [declare this and any other high risk permissions](https://support.google.com/googleplay/android-developer/answer/9214102) using the Declaration Form in Play Console"
+
+And, from 2021.8 Google Play need targetSdkVersion >= 30 for new APP, ref to [play-policies](https://developer.android.com/distribute/play-policies).
+
+#### targetSdkVersion >= 29 (means Android 10)
+In `android/app/src/main/AndroidManifest.xml`
+```
+<application android:requestLegacyExternalStorage="true" ... >
+```
+But if your phone >= Android 11 , the `requestLegacyExternalStorage` will be ignored, ref to [opt-out-scoped-storage](https://developer.android.com/training/data-storage/use-cases#opt-out-scoped-storage).
+
 ## Start file server in your phone
 
 ```jsx
