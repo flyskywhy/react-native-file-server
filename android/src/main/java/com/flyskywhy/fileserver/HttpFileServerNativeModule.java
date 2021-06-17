@@ -76,6 +76,11 @@ public class HttpFileServerNativeModule extends ReactContextBaseJavaModule imple
         super.onCatalystInstanceDestroy();
     }
 
+    @ReactMethod(isBlockingSynchronousMethod = true)
+    public boolean isStarted() {
+        return serverflag;
+    }
+
     @ReactMethod
     public void setVersion(String ver) {
         version = ver;

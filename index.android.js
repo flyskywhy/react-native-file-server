@@ -3,6 +3,10 @@ import packageJson from './package.json';
 const Server = NativeModules.HttpFileServer;
 
 module.exports = {
+  isStarted() {
+    return Server.isStarted();
+  },
+
   start({port = 8080}) {
     Server.setVersion(packageJson.version);
 
