@@ -1,6 +1,6 @@
 {
   "name": "react-native-file-server",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A full function HTTP file server android module which can be embeded in React Native apps",
   "main": "index",
   "repository": {
@@ -22,7 +22,8 @@
     "react-native",
     "rename",
     "server",
-    "upload"
+    "upload",
+    "web"
   ],
   "author": {
     "name": "Li Zheng",

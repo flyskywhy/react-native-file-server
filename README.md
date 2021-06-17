@@ -9,6 +9,8 @@ A full function HTTP file server android module which can be embeded in React Na
 
 Can `上传`(upload) `删除`(delete) `下载`(download) `重命名`(rename) `打开`(open) file.
 
+<img src="https://raw.githubusercontent.com/flyskywhy/react-native-file-server/master/assets/manage.png" width="480">
+
 ## Install
 
 ```shell
