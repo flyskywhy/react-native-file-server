@@ -23,6 +23,9 @@ In `android/app/src/main/AndroidManifest.xml`
 ```
 <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
 ```
+
+And works with [react-native-external-storage-permission](https://github.com/leonredfish/react-native-external-storage-permission) to allow access to manage all files.
+
 As [Use of All files access (MANAGE_EXTERNAL_STORAGE) permission - Play Console Help](https://support.google.com/googleplay/android-developer/answer/10467955) said, "you will be required to [declare this and any other high risk permissions](https://support.google.com/googleplay/android-developer/answer/9214102) using the Declaration Form in Play Console"
 
 And, from 2021.8 Google Play need targetSdkVersion >= 30 for new APP, ref to [play-policies](https://developer.android.com/distribute/play-policies).
